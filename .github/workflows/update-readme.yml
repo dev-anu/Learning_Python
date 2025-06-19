@@ -1,0 +1,31 @@
+name: Auto-check Day in README
+
+on:
+  push:
+    paths:
+      - "day*/**"
+
+jobs:
+  check-day:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Update README checkboxes
+        run: |
+          for dir in day*/; do
+            day=$(echo $dir | grep -o '[0-9]\+')
+            if [ -f README.md ]; then
+              sed -i "s/- \[ \] \*\*Day $day\*\*/- [x] **Day $day**/" README.md
+            fi
+          done
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add README.md
+          git commit -m "✅ Auto-checked completed days in README"
+          git push
+        continue-on-error: true
