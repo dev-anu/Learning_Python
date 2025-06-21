@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "day*/**"
+  workflow_dispatch: # 👈 enables manual run from GitHub UI
 
 jobs:
   check-day:
