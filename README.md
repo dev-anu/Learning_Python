@@ -8,7 +8,7 @@ Welcome to your journey to becoming a Full-Stack AI Engineer! This challenge ble
 
 - [x] **Day 1**: Python Basics (Variables, Loops, Functions)
 - [x] **Day 2**: Lists, Dictionaries, File I/O
-- [ ] **Day 3**: LangChain Intro + Calculator Chain
+- [x] **Day 3**: LangChain Intro + Calculator Chain
 - [ ] **Day 4**: Python Packages + CLI Tool
 - [ ] **Day 5**: Ask-PDF Bot (LangChain + Chroma)
 - [ ] **Day 6**: Python Classes + LangChain Chains
